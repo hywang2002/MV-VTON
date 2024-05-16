@@ -11,5 +11,3 @@ CUDA_VISIBLE_DEVICES=3 python test.py --gpu_id 0 \
 --W 384 
 
 #!/bin/bash
-
-# code
