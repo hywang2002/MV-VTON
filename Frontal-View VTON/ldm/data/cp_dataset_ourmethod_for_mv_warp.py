@@ -1,5 +1,5 @@
 # coding=utf-8
-# cp_dataset_ourmethod_for_mv_warp.py
+# cp_dataset_mv_paired.py
 import os
 
 import PIL

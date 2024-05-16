@@ -130,56 +130,7 @@ class MultiViewDataset(Dataset):
         ref_image = (ref_image + 1.0) / 2.0
         ref_image = transforms.Resize((224, 224))(ref_image)
 
-        # ref_image_np = 255. * rearrange(ref_image.cpu().numpy(), 'c h w -> h w c')
-        # img = Image.fromarray(ref_image_np.astype(np.uint8))
-        # img.save(os.path.join("/hdd1/why/DCI-VTON-Virtual-Try-On/results/mv_1/result", file_name_dci[:-4] + "_cloth.png"))
-
-        # max_value = torch.max(ref_image)
-        # min_value = torch.min(ref_image)
-
-        # print("最大值:", max_value.item())
-        # print("最小值:", min_value.item())
-
         ref_imgs = self.clip_normalize(ref_image)
-
-
-        # # keypoints [0,1]
-        # keypoints = []
-        # for i in self.all_list:
-        #     keypoints_path = os.path.join(self.dataroot_path, "keypoints", folder_name,
-        #                                   file_name[i].split('.')[0] + '.json')
-        #     with open(keypoints_path, 'r') as f:
-        #         pose_data = json.load(f)
-        #         # pose_data = pose_data.reshape((-1, 4))
-        #         keypoints.append(pose_data)
-        # 
-        # cloth_pose = []
-        # 
-        # for i in self.cloth_list:
-        #     d1 = []
-        #     for pose_d in keypoints[i]:
-        #         ux = pose_d[0] / 384.0
-        #         uy = pose_d[1] / 512.0
-        # 
-        #         # scale posemap points
-        #         px = ux * self.width
-        #         py = uy * self.height
-        #         d1.append(kpoint_to_heatmap(np.array([px, py]), (self.height, self.width), 9))
-        #     d1 = torch.stack(d1)
-        #     d1 = padding_tensor(d1, (21, 512, 384))
-        #     cloth_pose.append(d1)
-        # 
-        # d = []
-        # for pose_d in keypoints[self.label_num]:
-        #     ux = pose_d[0] / 384.0
-        #     uy = pose_d[1] / 512.0
-        # 
-        #     # scale posemap points
-        #     px = ux * self.width
-        #     py = uy * self.height
-        #     d.append(kpoint_to_heatmap(np.array([px, py]), (self.height, self.width), 9))
-        # d = torch.stack(d)
-        # agnostic_pose = padding_tensor(d, target_size=(21, 512, 384))
 
         result = {}
         for k in self.outputlist:

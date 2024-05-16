@@ -1,5 +1,4 @@
 # coding=utf-8
-# cp_dataset_ourmethod_for_mv_warp.py
 import os
 
 import PIL
@@ -68,16 +67,7 @@ class CPDataset(data.Dataset):
             folders.append(folder)
         folders = sorted(folders)  # 00000_1, 00000_2, 00000_3, ...
 
-        # with open(osp.join(dataroot, self.data_list), 'r') as f:
-        #     for line in f.readlines():
-        #         im_name, c_name = line.strip().split()
-        #         im_names.append(im_name)
-        #         c_names.append(c_name)
-
         self.folders = folders
-        # self.c_names = dict()
-        # self.c_names['paired'] = im_names
-        # self.c_names['unpaired'] = im_names
 
     def name(self):
         return "CPDataset"
@@ -92,8 +82,7 @@ class CPDataset(data.Dataset):
         im_names = sorted(im_names)  # [1.jpg, 2.jpg, 5.jpg]
         if len(im_names) != 3:
             raise ValueError("folder {} imgs num != 3".format(folder))
-        # print("====")
-        # print(im_names)
+
         # person image
         im_pil_big = Image.open(osp.join(self.data_path, 'image-wo-bg', folder, im_names[1]))
         im_pil = transforms.Resize(self.crop_size, interpolation=2)(im_pil_big)
@@ -164,29 +153,9 @@ class CPDataset(data.Dataset):
 
         feat = inpaint
 
-        # print("=======")
-        # print(skeleton_cf.shape)
-        # print(skeleton_cb.shape)
-        # print(skeleton_p.shape)
-        # print(order=="1")
-        # print(ref_image_b.shape)
-        # print(feat.shape)
-
-        # normalized_tensor = (controlnet_cond_b + 1) / 2
-        # # normalized_tensor = (inpaint_mask * 255).byte()
-
-        # # 将范围从 [0, 1] 转换为 [0, 255]，并转换为 PIL 图像
-        # image_save = transforms.ToPILImage()(normalized_tensor)
-
-        # # 保存图像为 JPEG 文件
-        # save_dir = "/mnt/pfs-mc0p4k/cvg/team/didonglin/why/DCI-VTON-Virtual-Try-On-ca/results/our_data_method_visual/controlnet_cond_b"
-        
-        # os.makedirs(save_dir, exist_ok=True)
-        # image_save.save(os.path.join(save_dir, self.folders[index] + '.jpg'))
-
         result = {
             "GT": im,  # [-1,1]
-            "inpaint_image": inpaint,  # mask 身体 手臂 手 [128,128,128], [-1,1]
+            "inpaint_image": inpaint,  # mask [128,128,128], [-1,1]
             "inpaint_mask": 1.0 - inpaint_mask,  # [0,1]
             "ref_imgs_f": ref_image_f,  # clip_normalize
             "ref_imgs_b": ref_image_b,  # clip_normalize
