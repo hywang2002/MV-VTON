@@ -109,6 +109,7 @@ After these, the folder structure should look like this (the unpaired-cloth* onl
 
 To test on paired settings (using `cp_dataset_mv_paired.py`), you can modify the `configs/viton512.yaml` and `main.py`,
 or directly rename `cp_dataset_mv_paired.py` to `cp_dataset.py` (recommended). Then run:
+
 ```shell
 sh test.sh
 ```
@@ -117,37 +118,57 @@ To test on unpaired settings, rename `cp_dataset_mv_unpaired.py` to `cp_dataset.
 
 #### VITON-HD
 
-or just simply run:
+To test on paired settings, input command `cd Frontal-View\ VTON/`, then directly run:
 
 ```shell
 sh test.sh
 ```
 
+To test on unpaired settings, input command `cd Frontal-View\ VTON/`, add `--unpaired` to `test.sh`, add then run:
+
+```shell
+sh test.sh
+```
+
+#### Metrics
+
+We compute `LPIPS`, `SSIM`, `FID`, `KID` using the same tools in [LaDI-VTON](https://github.com/miccunifi/ladi-vton).
+
 ### Training
 
 #### MVG
+
 We use Paint-by-Example as initialization, please download the pretrained model
 from [Google Drive](https://drive.google.com/file/d/15QzaTWsvZonJcXsNv-ilMRCYaQLhzR_i/view) and save the model to
 directory `checkpoints`. Rename `cp_dataset_mv_paired.py` to `cp_dataset.py`, then run:
+
 ```shell
 sh train.sh
 ```
 
 #### VITON-HD
 
+Input command `cd Frontal-View\ VTON/`, then directly run:
+
+```shell
+sh train.sh
+```
 
 ## Acknowledgements
 
-Our code is heavily borrowed from [Paint-by-Example](https://github.com/Fantasy-Studio/Paint-by-Example). We also
-thank [PF-AFN](https://github.com/geyuying/PF-AFN), our warping module depends on it.
+Our code is heavily borrowed from [Paint-by-Example](https://github.com/Fantasy-Studio/Paint-by-Example)
+and [DCI-VTON](https://github.com/bcmi/DCI-VTON-Virtual-Try-On). We also
+thank previous work [PF-AFN](https://github.com/geyuying/PF-AFN), [GP-VTON](https://github.com/xiezhy6/GP-VTON), 
+[LaDI-VTON](https://github.com/miccunifi/ladi-vton)
+and [StableVITON](https://github.com/rlawjdghek/StableVITON).
 
 ## Citation
 
 ```
-@inproceedings{gou2023taming,
-  title={Taming the Power of Diffusion Models for High-Quality Virtual Try-On with Appearance Flow},
-  author={Gou, Junhong and Sun, Siyu and Zhang, Jianfu and Si, Jianlou and Qian, Chen and Zhang, Liqing},
-  booktitle={Proceedings of the 31st ACM International Conference on Multimedia},
-  year={2023}
+@article{wang2024mv,
+  title={MV-VTON: Multi-View Virtual Try-On with Diffusion Models},
+  author={Wang, Haoyu and Zhang, Zhilu and Di, Donglin and Zhang, Shiliang and Zuo, Wangmeng},
+  journal={arXiv preprint arXiv:2404.17364},
+  year={2024}
 }
 ```
