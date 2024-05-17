@@ -49,7 +49,8 @@ conda activate mv-vton
 
 3. Download the pretrained [vgg](https://drive.google.com/file/d/1rvow8jStPt8t2prDcSRlnf8yzXhrYeGo/view?usp=sharing)
    checkpoint and put it in `models/vgg/` for Multi-View VTON and `Frontal-View VTON/models/vgg/` for Frontal-View VTON.
-4. Download the pretrained [models](https://github.com/shadow2496/VITON-HD) and put `mvg.ckpt` in `checkpoint/` and put `vitonhd.ckpt`
+4. Download the pretrained [models](https://github.com/shadow2496/VITON-HD) and put `mvg.ckpt` in `checkpoint/` and
+   put `vitonhd.ckpt`
    in `Frontal-View VTON/checkpoint/`.
 
 ### Datasets
@@ -106,8 +107,15 @@ After these, the folder structure should look like this (the unpaired-cloth* onl
 
 #### MVG
 
-#### VITON-HD
+To test on paired settings (using `cp_dataset_mv_paired.py`), you can modify the `configs/viton512.yaml` and `main.py`,
+or directly rename `cp_dataset_mv_paired.py` to `cp_dataset.py` (recommended). Then run:
+```shell
+sh test.sh
+```
 
+To test on unpaired settings, rename `cp_dataset_mv_unpaired.py` to `cp_dataset.py`, and do the same operation.
+
+#### VITON-HD
 
 or just simply run:
 
