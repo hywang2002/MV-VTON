@@ -125,37 +125,16 @@ sh test.sh
 
 ### Training
 
-#### Warping Module
-
-To train the warping module, just run following commands:
-
-```shell
-cd PF-AFN/PF-AFN_train/
-sh train_VITON.sh
-```
-
-#### Diffusion Model
-
-We utilize the pretrained Paint-by-Example as initialization, please download the pretrained models
+#### MVG
+We use Paint-by-Example as initialization, please download the pretrained model
 from [Google Drive](https://drive.google.com/file/d/15QzaTWsvZonJcXsNv-ilMRCYaQLhzR_i/view) and save the model to
-directory `checkpoints`.
-
-To train a new model on VITON-HD, you should first modify the dataroot of VITON-HD dataset in `configs/viton512.yaml`
-and then use `main.py` for training. For example,
-
-```shell
-python -u main.py \
---logdir models/dci-vton \
---pretrained_model checkpoints/model.ckpt \
---base configs/viton512.yaml \
---scale_lr False
-```
-
-or simply run:
-
+directory `checkpoints`. Rename `cp_dataset_mv_paired.py` to `cp_dataset.py`, then run:
 ```shell
 sh train.sh
 ```
+
+#### VITON-HD
+
 
 ## Acknowledgements
 
