@@ -49,7 +49,7 @@ conda activate mv-vton
 
 3. Download the pretrained [vgg](https://drive.google.com/file/d/1rvow8jStPt8t2prDcSRlnf8yzXhrYeGo/view?usp=sharing)
    checkpoint and put it in `models/vgg/` for Multi-View VTON and `Frontal-View VTON/models/vgg/` for Frontal-View VTON.
-4. Download the pretrained [models](https://github.com/shadow2496/VITON-HD) and put `mvg.ckpt` in `checkpoint/` and
+4. Download the pretrained models (coming soon) and put `mvg.ckpt` in `checkpoint/` and
    put `vitonhd.ckpt`
    in `Frontal-View VTON/checkpoint/`.
 
@@ -57,8 +57,7 @@ conda activate mv-vton
 
 #### MVG
 
-1. Fill in  [Dataset Request Form](https://github.com/shadow2496/VITON-HD) to get MVG dataset.
-2. Put the pre-warped under MVG dataset.
+1. Download MVG dataset (coming soon).
 
 After these, the folder structure should look like this (the warp_feat_unpair* only included in test directory):
 
@@ -77,7 +76,7 @@ After these, the folder structure should look like this (the warp_feat_unpair* o
 #### VITON-HD
 
 1. Download [VITON-HD](https://github.com/shadow2496/VITON-HD) dataset
-2. Download pre-warped cloth image/mask [Baidu Cloud](https://pan.baidu.com/s/1ss8e_Fp3ZHd6Cn2JjIy-YQ?pwd=x2k9) and put
+2. Download pre-warped cloth image/mask via [Baidu Cloud](https://pan.baidu.com/s/1uQM0IOltOmbeqwdOKX5kCw?pwd=cshy) and put
    it under VITON-HD dataset.
 
 After these, the folder structure should look like this (the unpaired-cloth* only included in test directory):
