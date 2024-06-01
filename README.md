@@ -49,7 +49,7 @@ conda activate mv-vton
 
 3. Download the pretrained [vgg](https://drive.google.com/file/d/1rvow8jStPt8t2prDcSRlnf8yzXhrYeGo/view?usp=sharing)
    checkpoint and put it in `models/vgg/` for Multi-View VTON and `Frontal-View VTON/models/vgg/` for Frontal-View VTON.
-4. Download the pretrained models [mvg.ckpt]() and [vitonhd.ckpt](), and put `mvg.ckpt` in `checkpoint/` and
+4. Download the pretrained models [mvg.ckpt](https://pan.baidu.com/s/17SC8fHE5w2g7gEtzJgRRew?pwd=cshy) and [vitonhd.ckpt](https://pan.baidu.com/s/1R2yGgm35UwTpnXPEU6-tlA?pwd=cshy), and put `mvg.ckpt` in `checkpoint/` and
    put `vitonhd.ckpt`
    in `Frontal-View VTON/checkpoint/`.
 
