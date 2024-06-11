@@ -6,6 +6,10 @@ PyTorch implementation of **MV-VTON: Multi-View Virtual Try-On with Diffusion Mo
 [![Project](https://img.shields.io/badge/Project-Website-orange)](https://hywang2002.github.io/MV-VTON/)
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=hywang2002.MV-VTON)
 
+## News
+- 🔥The first multi-view virtual try-on dataset MVG is now available.
+- 🔥Checkpoints on both frontal-view and multi-view virtual try-on tasks are released.
+
 ## Overview
 
 ![](assets/framework.png)
