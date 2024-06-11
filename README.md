@@ -49,7 +49,8 @@ conda activate mv-vton
 
 3. Download the pretrained [vgg](https://drive.google.com/file/d/1rvow8jStPt8t2prDcSRlnf8yzXhrYeGo/view?usp=sharing)
    checkpoint and put it in `models/vgg/` for Multi-View VTON and `Frontal-View VTON/models/vgg/` for Frontal-View VTON.
-4. Download the pretrained models [mvg.ckpt](https://pan.baidu.com/s/17SC8fHE5w2g7gEtzJgRRew?pwd=cshy) and [vitonhd.ckpt](https://pan.baidu.com/s/1R2yGgm35UwTpnXPEU6-tlA?pwd=cshy), and put `mvg.ckpt` in `checkpoint/` and
+4. Download the pretrained models [mvg.ckpt](https://pan.baidu.com/s/17SC8fHE5w2g7gEtzJgRRew?pwd=cshy)
+   and [vitonhd.ckpt](https://pan.baidu.com/s/1R2yGgm35UwTpnXPEU6-tlA?pwd=cshy), and put `mvg.ckpt` in `checkpoint/` and
    put `vitonhd.ckpt`
    in `Frontal-View VTON/checkpoint/`.
 
@@ -57,7 +58,10 @@ conda activate mv-vton
 
 #### MVG
 
-1. Download MVG dataset (coming soon).
+1. Fill [Dataset Request Form](https://pan.baidu.com/s/12HAq0V4FfgpU_q8AeyZzwA?pwd=cshy) and
+   contact `cshy2mvvton@outlook.com` with this form to get MVG dataset (
+   Non-institutional emails (e.g. gmail.com) are not allowed. Please provide your institutional
+   email address.).
 
 After these, the folder structure should look like this (the warp_feat_unpair* only included in test directory):
 
@@ -76,7 +80,8 @@ After these, the folder structure should look like this (the warp_feat_unpair* o
 #### VITON-HD
 
 1. Download [VITON-HD](https://github.com/shadow2496/VITON-HD) dataset
-2. Download pre-warped cloth image/mask via [Baidu Cloud](https://pan.baidu.com/s/1uQM0IOltOmbeqwdOKX5kCw?pwd=cshy) and put
+2. Download pre-warped cloth image/mask via [Baidu Cloud](https://pan.baidu.com/s/1uQM0IOltOmbeqwdOKX5kCw?pwd=cshy) and
+   put
    it under VITON-HD dataset.
 
 After these, the folder structure should look like this (the unpaired-cloth* only included in test directory):
@@ -157,7 +162,7 @@ sh train.sh
 
 Our code is heavily borrowed from [Paint-by-Example](https://github.com/Fantasy-Studio/Paint-by-Example)
 and [DCI-VTON](https://github.com/bcmi/DCI-VTON-Virtual-Try-On). We also
-thank previous work [PF-AFN](https://github.com/geyuying/PF-AFN), [GP-VTON](https://github.com/xiezhy6/GP-VTON), 
+thank previous work [PF-AFN](https://github.com/geyuying/PF-AFN), [GP-VTON](https://github.com/xiezhy6/GP-VTON),
 [LaDI-VTON](https://github.com/miccunifi/ladi-vton)
 and [StableVITON](https://github.com/rlawjdghek/StableVITON).
 
