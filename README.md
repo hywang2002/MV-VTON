@@ -53,8 +53,8 @@ conda activate mv-vton
 
 3. Download the pretrained [vgg](https://drive.google.com/file/d/1rvow8jStPt8t2prDcSRlnf8yzXhrYeGo/view?usp=sharing)
    checkpoint and put it in `models/vgg/` for Multi-View VTON and `Frontal-View VTON/models/vgg/` for Frontal-View VTON.
-4. Download the pretrained models [mvg.ckpt](https://pan.baidu.com/s/17SC8fHE5w2g7gEtzJgRRew?pwd=cshy)
-   and [vitonhd.ckpt](https://pan.baidu.com/s/1R2yGgm35UwTpnXPEU6-tlA?pwd=cshy), and put `mvg.ckpt` in `checkpoint/` and
+4. Download the pretrained models `mvg.ckpt` via [Baidu Cloud](https://pan.baidu.com/s/17SC8fHE5w2g7gEtzJgRRew?pwd=cshy) or [Google Drive](https://drive.google.com/file/d/1J91PoT8A9yqHWNxkgRe6ZCnDEhN-H9O6/view?usp=sharing),
+   and `vitonhd.ckpt` via [Baidu Cloud](https://pan.baidu.com/s/1R2yGgm35UwTpnXPEU6-tlA?pwd=cshy) or [Google Drive](https://drive.google.com/file/d/13A0uzUY6PuvitLOqzyHzWASOh0dNXdem/view?usp=sharing), and put `mvg.ckpt` in `checkpoint/` and
    put `vitonhd.ckpt`
    in `Frontal-View VTON/checkpoint/`.
 
@@ -62,7 +62,7 @@ conda activate mv-vton
 
 #### MVG
 
-1. Fill [Dataset Request Form](https://pan.baidu.com/s/12HAq0V4FfgpU_q8AeyZzwA?pwd=cshy) and
+1. Fill `Dataset Request Form` via [Baidu Cloud](https://pan.baidu.com/s/12HAq0V4FfgpU_q8AeyZzwA?pwd=cshy) or [Google Drive](https://drive.google.com/file/d/1zWt6HYBz7Vzaxu8rp1bwkhRoBkxbwQjw/view?usp=sharing), and
    contact `cshy2mvvton@outlook.com` with this form to get MVG dataset (
    Non-institutional emails (e.g. gmail.com) are not allowed. Please provide your institutional
    email address.).
@@ -84,7 +84,7 @@ After these, the folder structure should look like this (the warp_feat_unpair* o
 #### VITON-HD
 
 1. Download [VITON-HD](https://github.com/shadow2496/VITON-HD) dataset
-2. Download pre-warped cloth image/mask via [Baidu Cloud](https://pan.baidu.com/s/1uQM0IOltOmbeqwdOKX5kCw?pwd=cshy) and
+2. Download pre-warped cloth image/mask via [Baidu Cloud](https://pan.baidu.com/s/1uQM0IOltOmbeqwdOKX5kCw?pwd=cshy) or [Google Drive](https://drive.google.com/file/d/18DTWfhxUnfg41nnwwpCKN--akC4eT9DM/view?usp=sharing) and
    put
    it under VITON-HD dataset.
 
