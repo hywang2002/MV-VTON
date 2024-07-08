@@ -170,6 +170,9 @@ thank previous work [PF-AFN](https://github.com/geyuying/PF-AFN), [GP-VTON](http
 [LaDI-VTON](https://github.com/miccunifi/ladi-vton)
 and [StableVITON](https://github.com/rlawjdghek/StableVITON).
 
+## LICENSE
+MV-VTON: Multi-View Virtual Try-On with Diffusion Models © 2024 by Haoyu Wang, Zhilu Zhang, Donglin Di, Shiliang Zhang, Wangmeng Zuo is licensed under CC BY-NC-SA 4.0 
+
 ## Citation
 
 ```
