@@ -7,7 +7,7 @@
  --n_samples 2 \
  --seed 23 \
  --scale 1 \
- --H 1024 \
- --W 768
+ --H 512 \
+ --W 384
 
 # pose
